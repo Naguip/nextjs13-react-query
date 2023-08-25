@@ -1,17 +1,15 @@
-import Counter from "./counter";
-import ListUsers from "./list-users";
+import ListRandomAPI from "./random-api";
 import { Suspense } from "react";
 
 export default async function Page() {
   return (
     <main style={{ maxWidth: 1200, marginInline: "auto", padding: 20 }}>
-      <Counter />
       <Suspense
         fallback={
           <p style={{ textAlign: "center" }}>loading... on initial request</p>
         }
       >
-        <ListUsers />
+        <ListRandomAPI />
       </Suspense>
     </main>
   );
